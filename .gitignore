@@ -20,6 +20,9 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
+# Assets
+/assets
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/
