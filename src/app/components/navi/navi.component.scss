@@ -1,16 +1,13 @@
-.container {
-    position: relative;
-    margin-left: 15%;
-    margin-right: 15%;
-}
+
 
 nav {
+    position: relative;
     display: flex;
     margin-top: 30px;
     height: 64px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
-    overflow: hidden;
+    background-color: #fff !important;
 }
 
 .logo {
@@ -22,12 +19,13 @@ nav {
         object-fit: cover;
         width: 64px;
         height: 64px;
+        border-radius: 15px;
     }
 }
 
 .links {
-    padding-top: 7px;
-
+    margin-top: 18px;
+    z-index: 2;
     ul {
         padding: 0;
     }
@@ -55,12 +53,16 @@ nav {
     input[type="text"] {
         border: none;
         margin-top: 16px;
-        width: 300px;
+        width: 280px;
         height: 32px;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
         border-radius: 10px;
         outline: none;
         padding-left: 15px;
+        transition: .4s;
+    }
+    input[type="text"]:focus{
+        width: 300px;
     }
 
 }
@@ -88,3 +90,35 @@ nav {
         }
     }
 }
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    padding: 12px 16px;
+    z-index: 1;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    ul {
+        list-style-type: none;
+    }
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+    
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }

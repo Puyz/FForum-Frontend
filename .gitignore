@@ -21,6 +21,7 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 .editorconfig
+
 # Assets
 assets/
 
