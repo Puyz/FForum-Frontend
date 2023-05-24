@@ -8,14 +8,12 @@
     border-radius: 15px;
     width: 80%;
     height: 700px;
+    overflow: scroll;
 
     .head {
         padding: 20px;
+    }
 
-    }
-    .body {
-        text-align: center;
-    }
     .icon {
         float: left;
     }
@@ -30,6 +28,7 @@
     }
 }
 
+
 .right-side {
     margin-top: 80px;
     width: 20%;
@@ -37,7 +36,8 @@
 
     button {
         margin-top: 10px;
-        width: 198px;
+        margin-left: 13px;
+        width: 170px;
         height: 40px;
         border: none;
         background-color: #F3705A;
@@ -46,7 +46,51 @@
         border-radius: 10px;
         transition: .2s;
     }
-    button:hover {
-        margin-top: 6px;
+}
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.statistics {
+    box-shadow: 0 0 10px rgb(0, 0, 0, .25);
+    border-radius: 15px;
+    width: 220px;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 30px;
+
+    img {
+        float: left;
+        margin-left: 17px;
+        margin-top: 15px;
     }
+
+}
+
+.statistics-title {
+    float: left;
+    margin-left: 13px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #6F6C6C;
+}
+
+.statistics-left{
+    float: left;
+    text-align: left;
+    margin-left: 17px;
+    margin-top: 15px;
+    color: #6F6A6A;
+}
+.statistics-right{
+    float: left;
+    text-align: left;
+    margin-left: 17px;
+    margin-top: 15px;
 }

@@ -1,3 +1,4 @@
+
 .post {
     position: relative;
     width: 90%;
@@ -7,11 +8,47 @@
     border-radius: 15px;
     margin: 25px auto;
 
-    img {
-        position: absolute;
-        top: 18px;
-        left: 16px;
+    .avatar {
+        float: left;
+        margin-top: 18px;
+        margin-left: 16px;
         width: 53px;
         border-radius: 100%;
     }
+
+    .tag {
+        position: absolute;
+        top: 12px;
+        right: 18px;
+        width: 24px;
+    }
+}
+
+.post-title {
+    position: relative;
+    top: 18px;
+    left: 40px;
+    font-size: 18px;
+}
+
+.post-info {
+    position: relative;
+    display: flex;
+    top: 20px;
+    left: 40px;
+    color: #6F6A6A;
+}
+
+.isActive {
+    margin-left: 30px;
+}
+
+.isActive::before{
+    content: '';
+    display: inline-block;
+    background: #00BD08;
+    margin-right: 5px;
+    width: 9px;
+    height: 9px;
+    border-radius: 9px;
 }
