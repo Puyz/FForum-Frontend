@@ -39,14 +39,27 @@
     color: #6F6A6A;
 }
 
-.isActive {
+.active {
     margin-left: 30px;
 }
 
-.isActive::before{
+.active::before{
     content: '';
     display: inline-block;
     background: #00BD08;
+    margin-right: 5px;
+    width: 9px;
+    height: 9px;
+    border-radius: 9px;
+}
+.deactive {
+    margin-left: 30px;
+}
+
+.deactive::before{
+    content: '';
+    display: inline-block;
+    background: #db2800;
     margin-right: 5px;
     width: 9px;
     height: 9px;

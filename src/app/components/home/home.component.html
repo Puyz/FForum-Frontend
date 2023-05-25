@@ -11,12 +11,11 @@
             </div>
             <div>
                 <br>
-                <app-post />
-                <app-post />
-                <app-post />
-                <app-post />
-                <app-post />
-                <app-post />
+                <app-post *ngFor="let post of posts" 
+                [title]="post.title" 
+                [time]="post.createdDate"
+                [isActive]="post.isActive"
+                />
 
             </div>
         </div>
