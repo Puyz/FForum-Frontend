@@ -7,6 +7,9 @@ import { HomeComponent } from './components/home/home.component';
 import { PostComponent } from './components/post/post.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TimeagoPipe } from './pipes/timeago.pipe';
+import { PostDetailsComponent } from './components/post-details/post-details.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PostMessageComponent } from './components/post-message/post-message.component';
 
 @NgModule({
   declarations: [
@@ -14,10 +17,13 @@ import { TimeagoPipe } from './pipes/timeago.pipe';
     NaviComponent,
     HomeComponent,
     PostComponent,
-    TimeagoPipe
+    TimeagoPipe,
+    PostDetailsComponent,
+    PostMessageComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     HttpClientModule
   ],
   providers: [],

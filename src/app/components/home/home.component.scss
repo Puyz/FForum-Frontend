@@ -30,13 +30,13 @@
 
 
 .right-side {
-    margin-top: 80px;
-    width: 20%;
     text-align: center;
+    margin-top: 80px;
+
 
     button {
         margin-top: 10px;
-        margin-left: 13px;
+        margin-left: 25px;
         width: 170px;
         height: 40px;
         border: none;
@@ -49,10 +49,6 @@
 }
 
 
-
-::-webkit-scrollbar {
-    display: none;
-}
 
 
 
@@ -93,4 +89,10 @@
     text-align: left;
     margin-left: 17px;
     margin-top: 15px;
+}
+
+
+
+::-webkit-scrollbar {
+    display: none;
 }
