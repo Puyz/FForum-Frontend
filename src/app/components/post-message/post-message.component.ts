@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Message } from 'src/app/models/message';
 
 @Component({
   selector: 'app-post-message',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./post-message.component.scss']
 })
 export class PostMessageComponent {
-
+  @Input() message!: Message;
 }

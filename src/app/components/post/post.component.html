@@ -1,11 +1,13 @@
 <div class="post">
-    <img *ngIf="!image" class="avatar" src="assets/avatar.svg">
-    <img *ngIf="image" class="avatar" src="assets/avatar.jpg">
-    <h5 class="post-title">{{title}}</h5>
-    <div class="post-info">
-        <h6>{{time | timeago}}</h6>
-        <h6 *ngIf="isActive" class="active">Konu açık</h6>
-        <h6 *ngIf="!isActive" class="deactive">Konu Kapalı</h6>
-    </div>
-    <img class="tag" src="assets/help.svg">
+    <a routerLink="/post/{{post.postId}}">
+        <img *ngIf="!post.user.image" class="avatar" src="assets/avatar.svg">
+        <img *ngIf="post.user.image" class="avatar" src="assets/avatar.jpg">
+        <h5 class="post-title">{{post.title}}</h5>
+        <div class="post-info">
+            <h6>{{post.createdDate | timeago}}</h6>
+            <h6 *ngIf="post.isActive" class="active">Konu açık</h6>
+            <h6 *ngIf="!post.isActive" class="deactive">Konu Kapalı</h6>
+        </div>
+        <img class="tag" src="assets/help.svg">
+    </a>
 </div>

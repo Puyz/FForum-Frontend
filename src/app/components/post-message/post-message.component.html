@@ -2,22 +2,37 @@
 
 
     <div class="user-info">
-        <span class="tag">
-            ÜYE
+        <span class="tag" [ngStyle]="{'background-color': '#'+message.user.rank.color}">
+            {{message.user.rank.name}}
         </span>
         <img src="assets/avatar.svg" alt="" class="avatar">
-        <h5>Ömer Temel</h5>
-        <a href="user/omer">@omertemel</a>
+        <h5>{{message.user.fullname}}</h5>
+        <a routerLink="/user/{{message.user.username}}">@{{message.user.username}}</a>
     </div>
 
 
     <div class="post">
         <div class="post-info">
-            <h6>6 dakika önce</h6>
+            <h6>{{message.createdDate | timeago}}</h6>
         </div>
 
-        <p class="content"> R5 5500 daha iyi
-        </p>
+
+        
+
+        <div class="answer-body" *ngIf="message.answerMessage">
+            <div class="answer-user-info">
+                <img src="assets/avatar.svg" alt="" class="avatar">
+                <h6>{{message.answerMessage.user.fullname}}</h6>
+            </div>
+            <div class="answer-post">
+                <div class="answer-post-info">
+                    <h6>{{message.answerMessage.createdDate | timeago}}</h6>
+                </div>
+                <p class="answer-content">{{message.answerMessage.content}}</p>
+            </div>
+        </div>
+
+        <p class="content">{{message.content}}</p>
         <button class="reply-button">Yanıtla</button>
     </div>
 

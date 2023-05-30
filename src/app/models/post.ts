@@ -3,7 +3,7 @@ import { PostUser } from './postUser';
 import { SubCategory } from './subCategory';
 export interface Post {
     postId: number;
-    postUser: PostUser;
+    user: PostUser;
     category: Category;
     subCategory: SubCategory;
     title: string;

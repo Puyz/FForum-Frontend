@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Post } from 'src/app/models/post';
 import { format } from 'timeago.js';
 
 @Component({
@@ -7,10 +8,5 @@ import { format } from 'timeago.js';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent {
-   @Input() title: string = "";
-   @Input() time: Date = new Date();
-   @Input() isActive:boolean = false; 
-   @Input() image: string | null = null;
-
-  
+   @Input() post!: Post;
 }

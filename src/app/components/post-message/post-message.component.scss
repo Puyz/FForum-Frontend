@@ -56,7 +56,7 @@
         color: #6F6A6A;
     }
 
-    p {
+    .content {
         margin-top: 30px;
         margin-left: 32px;
     }
@@ -73,4 +73,77 @@
         border-radius: 10px;
         border: none;
     }
+}
+
+
+
+
+.answer-body::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.answer-body {
+    width: 936px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-left: 32px;
+
+
+
+}
+
+
+
+.answer-user-info {
+    float: left;
+    margin: 10px 20px;
+    width: 100px;
+    height: 120px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    text-align: center;
+
+    .avatar {
+        margin: 10px 0;
+        width: 48px;
+    }
+
+
+}
+
+.answer-post {
+    float: left;
+    margin-top: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    width: 760px;
+    height: 120px;
+
+    .answer-post-info {
+        position: relative;
+        display: flex;
+        top: 10px;
+        left: 32px;
+        color: #6F6A6A;
+
+
+    }
+
+    .answer-content {
+        margin-top: 20px;
+        margin-left: 32px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+}
+
+
+::-webkit-scrollbar {
+    display: none;
 }
