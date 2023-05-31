@@ -10,6 +10,8 @@ import { TimeagoPipe } from './pipes/timeago.pipe';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PostMessageComponent } from './components/post-message/post-message.component';
+import { NewPostComponent } from './components/new-post/new-post.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,15 @@ import { PostMessageComponent } from './components/post-message/post-message.com
     PostComponent,
     TimeagoPipe,
     PostDetailsComponent,
-    PostMessageComponent
+    PostMessageComponent,
+    NewPostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

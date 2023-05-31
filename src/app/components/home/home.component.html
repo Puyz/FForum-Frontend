@@ -1,4 +1,4 @@
-<div class="container">
+
 
     <div class="home">
         <!-- Export Component -->
@@ -15,7 +15,7 @@
                     <span class="visually-hidden">Loading...</span>
                 </div>
                 <div *ngIf="dataLoaded==true">
-                    <app-post *ngFor="let post of posts" [post]="post"/>
+                    <app-post *ngFor="let post of posts" [post]="post" />
                 </div>
 
 
@@ -24,22 +24,26 @@
 
         <!-- Export Component -->
         <div class="right-side">
-            <button>Yeni konu aç</button>
+            <button routerLink="/new/post" class="new-post-button">Yeni konu aç</button>
             <div class="statistics">
                 <img src="assets/statistics.svg">
                 <h6 class="statistics-title">Forum istatistikleri</h6>
-                <div class="statistics-left">
-                    <h6>Konular:</h6>
-                    <h6>Mesajlar:</h6>
-                    <h6>Üyeler:</h6>
+                <div *ngIf="statisticsDataLoaded==false" class="spinner-border text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
                 </div>
-                <div class="statistics-right">
-                    <h6>46,798</h6>
-                    <h6>367,339</h6>
-                    <h6>35,960</h6>
+                <div *ngIf="statisticsDataLoaded==true">
+                    <div class="statistics-left">
+                        <h6>Konular:</h6>
+                        <h6>Mesajlar:</h6>
+                        <h6>Üyeler:</h6>
+                    </div>
+                    <div class="statistics-right">
+                        <h6>{{statistics.postCount}}</h6>
+                        <h6>{{statistics.messageCount}}</h6>
+                        <h6>{{statistics.userCount}}</h6>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-</div>

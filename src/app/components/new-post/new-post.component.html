@@ -1,0 +1,32 @@
+<div class="new-post">
+    <div class="head">
+        <img src="assets/add-post.svg" alt="icon" class="icon">
+        <p class="title">
+            YENİ KONU
+        </p>
+    </div>
+    <br>
+    <div class="body">
+        <form [formGroup]="postAddForm">
+
+            <input type="text" id="title" formControlName="title" placeholder="Konu başlığı"><br>
+            <select name="category" id="category" formControlName="categoryId">
+                <option value="" disabled selected>Kategori</option>
+                <option value="Donanım">Donanım</option>
+                <option value="Yazılım">Yazılım</option>
+                <option value="Haber">Haber</option>
+            </select>
+            <select name="subCategory" id="subCategory" formControlName="subCategoryId" placeholder="sa">
+                <option value="" disabled selected>Alt Kategori</option>
+                <option value="Donanım">Donanım</option>
+                <option value="Yazılım">Yazılım</option>
+                <option value="Haber">Haber</option>
+            </select> <br>
+            <textarea id="content" formControlName="content" placeholder="Konu başlığı"></textarea><br>
+            <button id="add-post-button" type="submit">Ekle</button>
+        </form>
+
+
+    </div>
+
+</div>
