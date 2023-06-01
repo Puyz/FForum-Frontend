@@ -1,4 +1,4 @@
 export interface SubCategory {
-    subCategoryId: number;
-    subCategoryName: string;
+    id: number;
+    name: string;
 }

@@ -1,39 +1,44 @@
+<nav>
+    <div class="logo">
+        <img src="assets/logo.png" alt="logo">
+    </div>
 
-    <nav>
-        <div class="logo">
-            <img src="assets/logo.png" alt="logo">
-        </div>
+    <div class="links">
+        <ul>
+            <li class="navbar-link">
+                <a href="/">Ana sayfa</a>
+            </li>
+            <li class="navbar-link dropdown">
+                <a routerLink="/category/">Kategoriler</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li *ngFor="let category of categories" class="sub-dropdown">
+                            <a routerLink="/category/{{category.id}}">{{category.name}}</a>
+                            <ul *ngIf="category.subCategory.length > 0" class="sub-dropdown-content">
+                                <li *ngFor="let subCategory of category.subCategory">
+                                    <a href="category/sub/{{subCategory.id}}">{{subCategory.name}}</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
 
-        <div class="links">
-            <ul>
-                <li class="navbar-link">
-                    <a href="/">Ana sayfa</a>
-                </li>
-                <li class="navbar-link dropdown">
-                    <a>Kategoriler</a>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li><a href="category/1">Teknoloji</a></li>
-                            <li><a href="category/2">Donanım</a></li>
-                        </ul>
-                    </div>
-                </li>
+            </li>
 
-            </ul>
-        </div>
+        </ul>
+    </div>
 
-        <div class="search-area">
-            <input type="text" name="search" id="search" placeholder="Ara" autocomplete="off">
-        </div>
+    <div class="search-area">
+        <input type="text" name="search" id="search" placeholder="Ara" autocomplete="off">
+    </div>
 
-        <div class="user-info">
-            <a class="notification">
-                <img src="assets/notif.svg" alt="">
-            </a>
-            <a class="user">
-                <img src="assets/user.jpg" alt="" width="48">
-            </a>
-        </div>
+    <div class="user-info">
+        <a class="notification">
+            <img src="assets/notif.svg" alt="">
+        </a>
+        <a class="user">
+            <img src="assets/user.jpg" alt="" width="48">
+        </a>
+    </div>
 
-    </nav>
-
+</nav>
