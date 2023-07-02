@@ -1,7 +1,5 @@
 # FForum
 
-> under development
-
 ## Start app
 ```ng serve```
 
